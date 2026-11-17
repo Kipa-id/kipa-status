@@ -1,0 +1,30 @@
+/* Kipa colours (kipa-site src/styles/tokens.css): Bata #e2603f, Malam #161a33, Nila #2b3a8f, Kain #f5f4fa. Status colours stay Upptime's. */
+:root {
+  --body-background-color: #f5f4fa;
+  --body-text-color: #161a33;
+  --card-background-color: #ffffff;
+  --nav-background-color: #ffffff;
+  --nav-border-bottom-color: #e4e2ee;
+  --nav-current-border-bottom-color: #e2603f;
+  --card-border-color: #e4e2ee;
+  --down-border-left-color: #eb3b5a;
+  --down-background-color: #ffd0d2;
+  --degraded-border-left-color: #f7b731;
+  --up-border-left-color: #20bf6b;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #20bf6b;
+  --tag-down-background-color: #eb3b5a;
+  --tag-degraded-background-color: #f7b731;
+  --change-background-color: #f7b731;
+  --error-button-border-color: #2b3a8f;
+  --error-button-background-color: #2b3a8f;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #2b3a8f;
+  --submit-button-background-color: #2b3a8f;
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+a {
+  color: #2b3a8f;
+}

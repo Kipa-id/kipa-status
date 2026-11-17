@@ -1,31 +1,100 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Status page status.kipa.id (spec 053, Upptime per D104). Monitors per contract §4.1:
+# M1 and M2 now; M3–M9 are added when each product launches in production.
+# Staging hosts are not monitored here (this repository is public).
+owner: Kipa-id
+repo: kipa-status
+user-agent: kipa-status
+
+secrets: []
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Situs kipa.id
+    url: https://kipa.id/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Pusat bantuan
+    url: https://help.kipa.id/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.kipa.id
+  name: Status Layanan Kipa
+  logoUrl: https://kipa.id/favicon.svg
+  favicon: https://kipa.id/favicon-32.png
+  faviconSvg: https://kipa.id/favicon.svg
+  themeUrl: https://status.kipa.id/kipa-theme.css
+  introTitle: "**Status Layanan Kipa**"
+  introMessage: "Halaman ini menampilkan keadaan Kipa POS, Kipa Cuan, Kipa Etalase dan situs kipa.id, diperiksa otomatis setiap 5 menit. Ada kendala yang tidak tampil di sini? Hubungi Tim Kipa lewat WhatsApp 0899-9345-999 atau hello@kipa.id (Senin–Sabtu, 08.00–21.00 WIB)."
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: kipa.id
+      href: https://kipa.id/
+    - title: Hubungi Tim Kipa
+      href: https://kipa.id/kontak/
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Gangguan berlangsung
+  allSystemsOperational: Semua layanan berjalan normal
+  incidentReport: "Laporan gangguan #$NUMBER →"
+  activeIncidentSummary: Dibuka $DATE, $POSTS pembaruan
+  incidentTitle: Gangguan $NUMBER
+  incidentDetails: Rincian gangguan
+  incidentFixed: Selesai
+  incidentOngoing: Sedang diselidiki
+  incidentOpenedAt: Dibuka
+  incidentClosedAt: Selesai
+  incidentViewOnGitHub: Lihat di GitHub
+  incidentCommentSummary: Diperbarui $DATE oleh $AUTHOR
+  incidentBack: ← Kembali ke riwayat gangguan
+  pastIncidents: Riwayat gangguan
+  pastIncidentsResolved: Selesai dalam $MINUTES menit, $POSTS pembaruan
+  liveStatus: Keadaan sekarang
+  overallUptime: "Ketersediaan: $UPTIME"
+  overallUptimeTitle: Ketersediaan
+  averageResponseTime: "Waktu respons rata-rata: $TIMEms"
+  averageResponseTimeTitle: Waktu respons rata-rata
+  sevelDayResponseTime: Waktu respons 7 hari
+  responseTimeMs: Waktu respons (ms)
+  up: Normal
+  down: Gangguan
+  degraded: Lambat
+  ms: ms
+  loading: Memuat
+  navGitHub: GitHub
+  footer: "Halaman ini [terbuka]($REPO), dijalankan dengan [Upptime](https://upptime.js.org). © Kipa Indonesia"
+  rateLimitExceededTitle: Terlalu banyak permintaan
+  rateLimitExceededIntro: Halaman ini membaca data dari GitHub, dan batas permintaan per jam dari alamat Anda sudah habis. Coba lagi sekitar satu jam lagi.
+  rateLimitExceededWhatDoesErrorMean: Apa artinya?
+  rateLimitExceededErrorMeaning: GitHub mengizinkan 60 permintaan per jam untuk setiap alamat internet, dan batas itu sudah terpakai.
+  rateLimitExceededErrorHowCanFix: Bagaimana cara mengatasinya?
+  rateLimitExceededErrorFix: Tunggu sekitar satu jam, atau isi Personal Access Token GitHub Anda sendiri.
+  rateLimitExceededGeneratePAT: Cara membuat Personal Access Token
+  rateLimitExceededHasSet: Token pribadi Anda sudah tersimpan.
+  rateLimitExceededRemoveToken: Hapus token
+  rateLimitExceededGitHubPAT: Personal Access Token GitHub
+  rateLimitExceededCopyPastePAT: Tempel token Anda
+  rateLimitExceededSaveToken: Simpan token
+  errorTitle: Terjadi kesalahan
+  errorIntro: Keadaan terbaru belum bisa dimuat.
+  errorText: Coba lagi sebentar lagi.
+  errorHome: Ke halaman utama
+  pastScheduledMaintenance: Riwayat pemeliharaan
+  scheduledMaintenance: Pemeliharaan terjadwal
+  scheduledMaintenanceSummaryStarted: Berlangsung sejak $DATE selama $DURATION menit
+  scheduledMaintenanceSummaryStarts: Mulai $DATE selama $DURATION menit
+  startedAt: Mulai
+  startsAt: Mulai
+  duration: Lama
+  durationMin: $DURATION menit
+  incidentCompleted: Selesai
+  incidentScheduled: Terjadwal
+  duration24H: 24 jam
+  duration7D: 7 hari
+  duration30D: 30 hari
+  duration1Y: 1 tahun
+  durationAll: semua
+  locale: id-ID
