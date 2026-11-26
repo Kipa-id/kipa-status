@@ -1,5 +1,6 @@
 # Status page status.kipa.id (spec 053, Upptime per D104). Monitors per contract §4.1:
-# M1 and M2 now; M3–M9 are added when each product launches in production.
+# M1 and M2 since spec 053; the production rows of spec 081 C81 §13.2 added 2026-11-26 (Kipa Admin is
+# watched by GlitchTip instead, O081.16). Until go-live they sit inside the scheduled maintenance issue.
 # Staging hosts are not monitored here (this repository is public).
 owner: Kipa-id
 repo: kipa-status
@@ -15,6 +16,48 @@ sites:
     maxResponseTime: 5000
   - name: Pusat bantuan
     url: https://help.kipa.id/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa POS
+    slug: kipa-pos
+    url: https://app.kipa.id/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa POS API
+    slug: kipa-pos-api
+    url: https://api.kipa.id/api/v1/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Berkas Kipa POS
+    slug: berkas-kipa-pos
+    url: https://files.kipa.id/kipa-pos/healthcheck.txt
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa Cuan
+    slug: kipa-cuan
+    url: https://cuan.kipa.id/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa Cuan API
+    slug: kipa-cuan-api
+    url: https://cuan.kipa.id/api/v1/health
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa Etalase
+    slug: kipa-etalase
+    url: https://store.kipa.id/manage/
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
+  - name: Kipa Etalase API
+    slug: kipa-etalase-api
+    url: https://store.kipa.id/api/v1/health
     expectedStatusCodes:
       - 200
     maxResponseTime: 5000
